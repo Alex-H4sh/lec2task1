@@ -20,7 +20,8 @@ namespace LecTask1
         [TestMethod]
         public void Task1()
         {
-            driver.Navigate().GoToUrl("google.com");
+            driver.Navigate().GoToUrl("https://www.google.com");
+            Assert.IsFalse(!driver.Url.Contains("google.com"), "Wrong site");
         }
 
         [TestCleanup]
